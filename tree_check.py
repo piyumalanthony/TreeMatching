@@ -25,23 +25,23 @@ array = [1, 1, 1, 1, 1]
 sequence = [1, 1, 1]
 
 
-# def isValidSubsequence(array, sequence):
-#     if len(sequence) == 0:
-#         return True
-#     elif len(sequence) > 0 and len(array) == 0:
-#         return False
-#     elif len(sequence) > len(array):
-#         return False
-#     sequence_item = sequence[0]
-#     index = 0
-#     match_flag = False
-#     for i, item in enumerate(array):
-#         if item == sequence_item:
-#             index = i
-#             match_flag = True
-#     if match_flag:
-#         return isValidSubsequence(array[index + 1:], sequence[1:])
-#     else:
-#         return False
-#
-# print(isValidSubsequence(array,sequence))
+def isValidSubsequence(array, sequence):
+    if len(sequence) == 0:
+        return True
+    elif len(sequence) > 0 and len(array) == 0:
+        return False
+    elif len(sequence) > len(array):
+        return False
+    sequence_item = sequence[0]
+    index = 0
+    match_flag = False
+    for i, item in enumerate(array):
+        if item == sequence_item:
+            index = i
+            match_flag = True
+    if match_flag:
+        return isValidSubsequence(array[index + 1:], sequence[1:])
+    else:
+        return False
+
+print(isValidSubsequence(array,sequence))
