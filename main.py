@@ -1,16 +1,14 @@
-# This is a sample Python script.
+from plot_generation_v4 import generate_plots
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    file_str_list = [
+        "/home/piyumal/PHD/Hessian_experiments_v4/JC",
+        "/home/piyumal/PHD/Hessian_experiments_v4/JC_Gamma",
+        "/home/piyumal/PHD/Hessian_experiments_v4/HKY",
+        "/home/piyumal/PHD/Hessian_experiments_v4/HKY_Gamma"
+    ]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    for file_str in file_str_list:
+        generate_plots(file_str)
+
+
